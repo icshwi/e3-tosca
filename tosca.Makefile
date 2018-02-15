@@ -27,7 +27,7 @@
 
 #where_am_I := $(dir $(abspath $(lastword $(MAKEFILE_LIST))))
 
-include $(REQUIRE_TOOLS)/driver.makefile
+include $(E3_REQUIRE_TOOLS)/driver.makefile
 
 APP:=tosca
 
@@ -87,3 +87,7 @@ DBDS    += toscaUtils.dbd
 #SOURCES += ifcDev.c
 #DBDS    += ifc.dbd
 
+
+# db rule is the default in RULES_E3, so add the empty one
+
+db:
